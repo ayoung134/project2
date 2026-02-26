@@ -1,1 +1,10 @@
 /* Place CSS styles here */
+.top-background-image-with-content {
+    background-image: url(../img/barphoto.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

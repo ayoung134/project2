@@ -15,86 +15,70 @@ h1 {
   color: #faebd7;
 }
 
-nav {
-  position: sticky;
-  top: 0;
+:root {
+    --menu-count: 3;
+}
+
+body {
+  background-color: #a7d1ff;
+}
+/* tutorial for navbar */
+.header-main {
+  width: 100%;
+  padding: 0 60px;
+  height: 60px;
+  background-color: #f0ffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  background-color:#faebd7
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
-.logo {
+.header-main nav {
   display: flex;
-  align-items: center;
 }
 
-.logo img {
-  width: 40px;
+.header-main .logo {
+  height: 40px;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
+.header-main .logo img {
+  height: 100%;
+}
+
+.header-main ul {
   list-style: none;
+  display: flex;
+  align-self: center;
 }
 
-.nav-links a {
-  display: block;
-  padding: 30px 16px;
-  color: #0000ff;
-  text-decoration: none;
+.header-main ul li a {
+  display: flex;
+  padding: 0 10px;
+  height: 100%;
+  line-height: 60px;
+  color: #000000;
+  background-color: #f0ffff;
   text-transform: uppercase;
+  cursor: pointer;
   transition: all ease-in-out 100ms;
 }
 
-.nav-links a:hover{
-  background-color: #00ffff;
+.header-main ul li a:hover {
+  background-color: #dc143c;
+  color:#f0ffff
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-  width: 34px;
+.header-main form {
+  height: 40px;
+  padding-right: 5px;
+  display: flex;
+  border: 1px solid #aeaeae;
+  border-radius: 20px 100px 100px 20px;
+  width: fit-content;
+  align-self: center
 }
-
-.hamburger .bar {
-  flex-basis: 100%;
-  height: 4px;
-  background-color: #8b0000;
-  margin: 3px;
-}
-
-/*  Responsive design */
-
-@media (max-width: 768px) {
-  
-  nav {
-    flex-wrap: wrap;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    height: 80px;
-  }
-
-  .nav-links {
-    display: none;
-    flex-basis: 100%;
-    flex-wrap: wrap;
-  }
-
-  .nav-links li {
-    flex-basis: 100%;
-  }
-
-  .nav-links a:hover {
-    background-color:#8a2be2
-  }
-}
-

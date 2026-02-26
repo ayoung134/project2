@@ -1,4 +1,5 @@
 // JS scripts placed here
+
 // const hamburger = document.querySelector('.hamburger');
 // const navLinks = document.querySelector('.nav-links');
 
@@ -13,11 +14,15 @@
 //     }
 // })
 
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.getElementById('offcanvas-menu');
+// Mr. Jason's java script
+// const menuToggle = document.querySelector('.menu-toggle');
+// const menu = document.getElementById('offcanvas-menu');
 
-menuToggle.addEventListener('click', () => {
-  const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-  menuToggle.setAttribute('aria-expanded',!expanded);
-  menu.classList.toggle('expanded');
-});
+// menuToggle.addEventListener('click', () => {
+//   const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+//   menuToggle.setAttribute('aria-expanded',!expanded);
+//   menu.classList.toggle('expanded');
+// });
+
+// different tutorial
+

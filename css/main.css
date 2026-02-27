@@ -16,7 +16,7 @@ body {
   background-color: #232c6537;
   font-family: "Roboto Condensed", sans-serif;
   min-height: 100vh;
-  background: url(./absinthewoman[Converted].svg);
+  background: #510e10;
 }
 
 .navbar {
@@ -25,9 +25,10 @@ body {
   justify-content: center;
   height: 80px;
   width: 100%;
+  padding-right: 14px;
   position: sticky;
   top: 0;
-  background: transparent;
+  background: #feedc2;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 999;
@@ -36,14 +37,21 @@ body {
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
-  padding: 0 2 rem;
+  padding: 0 5 rem;
   max-width: 1600px
 }
 
 .logo {
   cursor: pointer;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px
 }
 
 .navbar-container .navbar-menu {
@@ -51,17 +59,89 @@ body {
   text-align: center;
   gap: 1.5rem;
   list-style: none;
-
 }
 
 .navbar-container .navbar-menu li a {
   text-decoration: none;
-  color: black;
+  color: #510e10;
   padding: 3px 20px;
   font-size: 1.3rem;
   border-radius: 20px;
-  
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
 }
+
+.navbar-container .navbar-menu li a:hover {
+  color: #232c65;
+  background: #232c6534;
+  border: 2px solid #232c65;
+}
+
+/* navbartoggle */
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #b32428;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    backdrop-filter: none
+  }
+
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-container .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+
+  /* hamburger */
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+}
+
 
 /* Fonts */
 h1, h2 {

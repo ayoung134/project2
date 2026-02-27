@@ -1,10 +1,11 @@
 /* Place CSS styles here */
 
-/* Blue: 232c65
+/* Logo color palette:
+ Blue: 232c65
 Yellow: d4ab43
 Red: b32428 */
 
-/* navbar */
+/* start navbar */
 
 * {
   margin: 0;
@@ -22,13 +23,14 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 80px;
   width: 100%;
-  padding-right: 14px;
+  padding-right: 34px;
+  padding-left: 24px;
   position: sticky;
   top: 0;
-  background: #feedc2;
+  background: #fff7e0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 999;
@@ -45,13 +47,11 @@ body {
 
 .logo {
   cursor: pointer;
-  display: flex;
-  justify-content:flex-start;
-  align-items: center;
 }
 
 .logo img {
   width: 60px
+  
 }
 
 .navbar-container .navbar-menu {
@@ -138,16 +138,35 @@ body {
 
 .navbar-toggle.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-}
+}}
 
-}
+/* end navbar */
+
+/* hero */
+
 
 
 /* Fonts */
-h1, h2 {
+h1 {
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 100px;
+  color: #ffffff;
 }
+
+a {
+  cursosr: pointer;
+}
+
+.top-background-image-with-content {
+    background-image: url(../img/absinthewoman.svg);
+    padding-top: 500px;
+    padding-bottom: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 /* font */

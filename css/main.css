@@ -1,85 +1,73 @@
 /* Place CSS styles here */
 
+/* Blue: 232c65
+Yellow: d4ab43
+Red: b32428 */
 
+/* navbar */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #232c6537;
+  font-family: "Roboto Condensed", sans-serif;
+  min-height: 100vh;
+  background: url(./absinthewoman[Converted].svg);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2 rem;
+  max-width: 1600px
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.navbar-container .navbar-menu {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+
+}
+
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: black;
+  padding: 3px 20px;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  
+}
+
+/* Fonts */
 h1, h2 {
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-body {
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-h1 {
-  color: #faebd7;
-}
-
-:root {
-    --menu-count: 3;
-}
-
-body {
-  background-color: #a7d1ff;
-}
-/* tutorial for navbar */
-.header-main {
-  width: 100%;
-  padding: 0 60px;
-  height: 60px;
-  background-color: #f0ffff;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-}
-
-.header-main nav {
-  display: flex;
-}
-
-.header-main .logo {
-  height: 60px;
-  width: fit-content;
-  align-self: center;
-  cursor: pointer;
-}
-
-.header-main .logo img {
-  height: 100%;
-}
-
-.header-main ul {
-  list-style: none;
-  display: flex;
-  align-self: center;
-}
-
-.header-main ul li a {
-  display: flex;
-   justify-content: flex-end;
-  padding: 0 10px;
-  height: 100%;
-  line-height: 60px;
-  color: #000000;
-  background-color: #f0ffff;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all ease-in-out 100ms;
-}
-
-.header-main ul li a:hover {
-  background-color: #dc143c;
-  color:#f0ffff
-}
-
-.header-main form {
-  height: 40px;
-  padding-right: 5px;
-  display: flex;
-  border: 1px solid #aeaeae;
-  border-radius: 20px 100px 100px 20px;
-  width: fit-content;
-  align-self: center
-}
+/* font */

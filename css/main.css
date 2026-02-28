@@ -99,7 +99,7 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    backdrop-filter: none
+    backdrop-filter: #510e10
   }
 
   .navbar-container .navbar-menu {
@@ -113,8 +113,9 @@ body {
     top: 0;
     right: 0;
     padding: 5rem 1.5rem;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 10px #000000;
     backdrop-filter: blur(10px);
+    background-color: #fff7e0a8;
   }
 
   .navbar-container .navbar-menu.active {
@@ -139,34 +140,84 @@ body {
 .navbar-toggle.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }}
-
 /* end navbar */
+
+
 
 /* hero */
 
-
-
-/* Fonts */
-h1 {
+h1, h2, h3 {
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 100px;
-  color: #ffffff;
+  color: #fff7e0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000000;
 }
 
-a {
-  cursosr: pointer;
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(#510e1054, #510e1054), 
+    url(../img/barphoto.jpg) no-repeat center / cover;
 }
 
-.top-background-image-with-content {
-    background-image: url(../img/absinthewoman.svg);
-    padding-top: 500px;
-    padding-bottom: 500px;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-position: center;
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* .container .info h1 {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
 
-/* font */
+.container .info h2 {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+} */
+
+.container .info h1 {
+  font-size: clamp(2.5rem, 7vw, 8rem);
+  letter-spacing: 3px;
+}
+
+.container .info h2 {
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  letter-spacing: 2px;
+}
+
+.container .info a {
+  text-decoration: none;
+  color:#fff7e0;
+  display: inline-block;
+  padding: 0.5em 2em;
+  margin-top: 2rem
+}
+
+.container .info a:hover {
+  color: #232c65;
+  background: #232c65;
+  border: 2px solid #161c42;
+  text-decoration: none;
+  color: #d4ab43;
+  padding: 3px 20px;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background-position: center top;
+    min-height: 70vh;
+  }
+}

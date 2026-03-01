@@ -1,4 +1,4 @@
-/* Place CSS styles here */
+/* Place CSS styles here
 
 /* Logo color palette:
  Blue: 232c65
@@ -103,7 +103,7 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    backdrop-filter: #510e10
+    backdrop-filter: blur(10px);
   }
 
   .navbar-container .navbar-menu {
@@ -325,13 +325,11 @@ header p {
 
 .events {
     display: flex;
-    gap: 40px;
+    gap: 80px;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 900px;
     width: 100%;
-    border-radius: 20px;
 }
 
 .event {
@@ -339,6 +337,8 @@ header p {
   border-radius: 20px;
   padding: 16px;
   background: #b32428;
+  text-align: center;
+  color:#fff7e0
 }
 
 .events h3 {
@@ -346,43 +346,24 @@ header p {
   margin-bottom: 30px;
 }
 
- .event p {
-    padding-left: 6px;
-    padding-right: 6px;
-    color:#fff7e0
-}
-
 .events img {
-  display: flex;
-  align-items: center;
-}
-
-
-@media (max-width: 768px) {
-    .events {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin: 0 auto;
-    }
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .events {
-        display: grid;
-        gap: 40px;
-        grid-template-columns: repeat(2, 1fr);
-        padding-left: 40px;
-        padding-right: 40px;
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-@media (max-width: 768px) {
-    .events {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    .events img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
     
 }
 
@@ -425,21 +406,7 @@ header p {
 
 }
 
-
-/* .footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  gap: 3.5rem;
-  background:#232c65;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 80px 13% 70px;
-  display: flex;
-  justify-content: end ;
-} */
-
+/* footer */
 .footer {
   background: #232c65;
   padding: 80px 13% 70px;
@@ -447,16 +414,14 @@ header p {
   gap: 3.5rem;
   justify-content: flex-end;
   color: #fff7e0;
+  cursor: pointer;
 }
 
-.foot-content h3{
-  color:#fff7e0;
-  font-size: 20px;
-  text-transform: none;
-  text-align: left;
-}
+/* .footer-content {
+  width: 100%;
+} */
 
-.footer-content li a:hover {
+.footer-content a:hover {
   color: #232c65;
   background: #232c65;
   border: 2px solid #161c42;
@@ -475,6 +440,22 @@ header p {
   color:#fff7e0;
   display: inline-block;
   padding: 0.5em 2em;
-  margin-top 16px;
-  margin-bottom: 16px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+} 
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 2rem;
+  }
+
+  .footer-content a {
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+  }
 }

@@ -64,7 +64,7 @@
             
             <div class="info">
               <h1>Queen<br> of Hearts</h1>
-              <h2>Where secrets are poured<br> and hearts are won</p>
+              <h2>Where secrets are poured<br> and hearts are won</h2>
               <h3><a href="#reservations">♥ RESERVE YOUR SEAT IN THE QUEEN'S COURT ♥</a></h3>
             </div>
     
@@ -118,7 +118,7 @@
       <p>To reserve your seat, please complete the form below. An access code will be sent to you via email or text.</p>
      <br>     
       <a name="reservations"></a>    
-        <form action="">
+        <form id="reservation-form">
           <label for="">Date</label>
           <input type="date" name="day">
           <label for="">Time</label>
@@ -133,7 +133,13 @@
           <input type="tel">
           <input type="submit" class="submit-button submit-2">
         </form>
-      </a>
+      <!-- end reservation -->
+
+       <!-- Thank you message -->
+
+  <div id="thank-you-message">
+    Your seat is being reserved. The Queen will summon you soon.
+  </div>
 
       <br>
       <br>
@@ -170,18 +176,11 @@
      
 
     </div>
-    <!-- End reservation -->
+    
+   
 
-    <!-- Thank you message -->
-
-    <form id="myForm">
-  <input type="text" placeholder="Your name" required>
-  <button type="submit">Submit</button>
-</form>
-
-<div id="message">
-  Your seat is now reserved, we look forward to seeing you at court!
-</div>
+  
+    
 
 
 

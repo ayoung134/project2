@@ -463,3 +463,9 @@ header p {
 a:visited {
   color: #232c65;
 }
+
+#message {
+  display: none;
+  color: green;
+  margin-top: 10px;
+}

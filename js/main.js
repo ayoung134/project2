@@ -9,3 +9,8 @@ navbarToggle.addEventListener('click', () => {
 });
 
 // End navbar
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop page refresh
+  document.getElementById("message").style.display = "block";
+});
